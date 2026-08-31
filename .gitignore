@@ -13,3 +13,6 @@ latex/
 # Data
 models/stage1/
 models/stage2/
+
+# Others
+notes/
