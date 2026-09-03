@@ -34,10 +34,4 @@ def get_full_dataset_models():
             criterion="gini",
             random_state=42,
         ),
-        # "Random Forest": RandomForestClassifier(
-        #     n_estimators=100,
-        #     criterion="gini",
-        #     n_jobs=-1,
-        #     random_state=42,
-        # ),
     }
