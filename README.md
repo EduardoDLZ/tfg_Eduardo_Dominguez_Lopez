@@ -1,33 +1,49 @@
-# Sistemas Inteligentes de Detección de Amenazas en Redes mediante Machine Learning
+# Intelligent Network Threat Detection with Machine Learning
 
-## Autoría
-| Campo | Datos |
+
+## Project Information
+
+| | |
 |---|---|
-| **Autor** | Eduardo Domínguez López |
-| **Directores** | Ignacio Javier Pérez Gálvez<br>José Ramón Trillo Vílchez |
-| **Titulación** | Grado de Ingeniería Informática |
-| **Centro** | E.T.S. de Ingenierías Informática y de Telecomunicación, Universidad de Granada |
+| **Author** | Eduardo Domínguez López |
+| **Supervisors** | Ignacio Javier Pérez Gálvez · José Ramón Trillo Vílchez |
+| **Institution** | University of Granada |
+| **Degree** | BSc in Computer Engineering |
+| **School** | School of Informatics and Telecommunications Engineering |
+---
+
+## Overview
+
+This project implements an experimental pipeline for detecting malicious network traffic using supervised Machine Learning.
+
+The system is based on labelled network-flow data and evaluates different feature representations and classification algorithms. The experiments investigate how data preprocessing, categorical encoding, feature reduction, logarithmic transformations, and feature scaling affect model performance.
+
+### Main objectives
+
+- Classify network traffic as **DDoS** or **BENIGN**.
+- Evaluate different ML classification algorithms.
+- Analyse the effect of feature engineering and feature selection.
+- Reduce redundant and highly correlated features.
+- Evaluate model performance using IDS-oriented metrics.
 
 ---
 
-## Objetivo general
 
-Desarrollar un modelo de inteligencia artificial capaz de detectar intrusiones maliciosas en redes informáticas y generar alertas automáticas ante posibles amenazas.
+## Dataset
+The project uses a reduced version of the original CIC-DDoS2019 dataset, obtained through Kaggle. This dataset was subsequently processed to generate two datasets used across the different experimental stages.
 
----
+### Dataset configurations
 
-## Conjuntos de datos utilizados
-
-| Fase | Conjunto | Preparación | Nº de atributos |
+| Stage | Dataset | Preparation | Features |
 |---|---|---|---:|
-| Fase I | `encoded` | Limpieza y codificación categórica | 78 |
-| Fase I | `numeric` | Limpieza universal | 67 |
-| Fase I | `correlation_09` | Conjunto `encoded` con correlación `(R > 0.9)` | 41 |
-| Fase I | `correlation_08` | Conjunto `encoded` con correlación `(R > 0.8)` | 35 |
-| Fase II | `filtered` | Limpieza universal y filtro estructural | 59 |
-| Fase II | `log_filtered` | Limpieza universal, filtro estructural y transformación logarítmica | 59 |
-| Fase II | `correlation_098_filtered` | Conjunto `filtered` con correlación `(R > 0.98)` | 43 |
-| Fase II | `correlation_098_scaled` | Conjunto `correlation_098` con escalado mediante `StandardScaler` | 43 |
+| Stage I | `encoded` | Data cleaning and categorical encoding | 78 |
+| Stage I | `numeric` | Universal data cleaning | 67 |
+| Stage I | `correlation_09` | `encoded` with correlation filtering `(R > 0.9)` | 41 |
+| Stage I | `correlation_08` | `encoded` with correlation filtering `(R > 0.8)` | 35 |
+| Stage II | `filtered` | Universal cleaning and structural filtering | 59 |
+| Stage II | `log_filtered` | Structural filtering and logarithmic transformation | 59 |
+| Stage II | `correlation_098_filtered` | `filtered` with correlation filtering `(R > 0.98)` | 43 |
+| Stage II | `correlation_098_scaled` | `correlation_098` with `StandardScaler` | 43 |
 
 ---
 
