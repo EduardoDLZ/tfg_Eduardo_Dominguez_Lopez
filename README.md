@@ -1,4 +1,4 @@
-# Intelligent Network Threat Detection with Machine Learning
+# Intelligent Network Threat Detection Systems Using Machine Learning
 
 
 ## Project Information
@@ -91,9 +91,3 @@ The project uses a reduced version of the original CIC-DDoS2019 dataset, obtaine
     └── utils/
 
 ```
-
-## Documentation
-
-The complete Bachelor’s Thesis is available here:
-
-[Download the Bachelor’s Thesis (PDF)](./tfg_Eduardo_Dominguez_Lopez.pdf)
